@@ -1,3 +1,4 @@
 # Reflection-Investigator
-implementation of interface that contains few function that using Reflection API. 
-Take your own class object and use this implementation on it.
+Implementation of interface that contains few function that using Reflection API,
+And returns interesting characteristics about some class object that you will choose to send with Load Function.
+Enjoy.
