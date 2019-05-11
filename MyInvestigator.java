@@ -17,25 +17,25 @@ public class MyInvestigator implements Investigator{
         instance = anInstanceOfSomething;
     }
 
-    @Override //CooL
+    @Override 
     public int getTotalNumberOfMethods() {
             Method methods[] = clazz.getDeclaredMethods();
             return methods.length;
     }
 
-    @Override //CooL
+    @Override
     public int getTotalNumberOfConstructors() {
         Constructor[] constructors = clazz.getDeclaredConstructors();
         return constructors.length;
     }
 
-    @Override //CooL
+    @Override 
     public int getTotalNumberOfFields() {
         Field[] fields = clazz.getDeclaredFields();
         return fields.length;
     }
 
-    @Override //CooL
+    @Override
     public Set<String> getAllImplementedInterfaces() {
         Class[] interfaces = clazz.getInterfaces();
         Set<String> interfacesSet= new HashSet<>();
@@ -46,7 +46,7 @@ public class MyInvestigator implements Investigator{
         return interfacesSet;
     }
 
-    @Override //CooL
+    @Override
     public int getCountOfConstantFields() {
         int counter=0;
         Field[] fields = clazz.getDeclaredFields();
@@ -58,7 +58,7 @@ public class MyInvestigator implements Investigator{
         return counter;
     }
 
-    @Override //CooL
+    @Override 
     public int getCountOfStaticMethods() {
         int counter = 0;
         Method[] methods = clazz.getDeclaredMethods();
@@ -69,18 +69,18 @@ public class MyInvestigator implements Investigator{
         return counter;
     }
 
-    @Override //CooL
+    @Override
     public boolean isExtending() {
         return (clazz.getSuperclass().getSimpleName() != Object.class.getSimpleName() &&
                 clazz.getSuperclass().getSimpleName() != clazz.getSimpleName());
     }
 
-    @Override //CooL
+    @Override 
     public String getParentClassSimpleName() {
         return clazz.getSuperclass().getSimpleName();
     }
 
-    @Override //CooL
+    @Override 
     public boolean isParentClassAbstract() {
         return Modifier.isAbstract(clazz.getSuperclass().getModifiers());
     }
@@ -105,7 +105,7 @@ public class MyInvestigator implements Investigator{
         return (int)method.invoke(instance,args);
     }
 
-    @Override //CooL
+    @Override 
     public Object createInstance(int numberOfArgs, Object... args) throws IllegalAccessException, InvocationTargetException, InstantiationException {
         Constructor constructors [] = clazz.getConstructors();
         for(Constructor ctor: constructors)
